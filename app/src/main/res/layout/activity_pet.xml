@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground"
+    android:fitsSystemWindows="true">
+
+    <!-- Empty or Loading Message -->
+    <TextView
+        android:id="@+id/emptyMessageTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="@string/loading_your_pets"
+        android:textColor="#666666"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+    <!-- RecyclerView for Pet List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/petRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/emptyMessageTextView"
+        android:layout_above="@id/bottom_navigation"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:visibility="gone" />
+
+    <!-- Floating Action Button (Add Pet) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addPetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="90dp"
+        android:layout_alignParentBottom="true"
+        android:src="@android:drawable/ic_input_add"
+        android:contentDescription="@string/add_pet"
+        tools:ignore="RelativeOverlap" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/bottom_nav_color_selector"
+        app:itemTextColor="@color/bottom_nav_color_selector"
+        app:elevation="8dp" />
+</RelativeLayout>

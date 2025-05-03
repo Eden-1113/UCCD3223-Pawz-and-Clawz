@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray_background"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header with pet image -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/petImage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_pet_default"
+                    android:contentDescription="Pet image"
+                    android:layout_marginEnd="16dp"
+                    app:srcCompat="@drawable/ic_pet_default" />
+
+                <TextView
+                    android:id="@+id/petNameTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pet's Log Record"
+                    android:textSize="24sp"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- No Log Record Message -->
+            <TextView
+                android:id="@+id/noLogMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Your Pet's First Log Record!"
+                android:textSize="18sp"
+                android:textColor="@color/secondary_text"
+                android:gravity="center"
+                android:padding="24dp"
+                android:visibility="gone"
+                android:drawableTop="@drawable/ic_add_circle_outline"
+                android:drawablePadding="8dp"/>
+
+            <!-- Log Record Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <!-- Section Title -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vaccination Info"
+                        android:textSize="16sp"
+                        android:textColor="@color/primary_color"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp"
+                        android:drawableStart="@drawable/ic_vaccine"
+                        android:drawablePadding="8dp"/>
+
+                    <!-- Vaccinated Info -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vaccinated Status:"
+                            android:textSize="14sp"
+                            android:textColor="@color/secondary_text"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:id="@+id/vaccinatedText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not vaccinated yet"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary_text"/>
+                    </LinearLayout>
+
+                    <!-- Next Vaccine Info -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Next Vaccine:"
+                            android:textSize="14sp"
+                            android:textColor="@color/secondary_text"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:id="@+id/nextVaccineText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not scheduled"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary_text"/>
+                    </LinearLayout>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider_color"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Section Title -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daily Routine"
+                        android:textSize="16sp"
+                        android:textColor="@color/primary_color"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp"
+                        android:drawableStart="@drawable/ic_food"
+                        android:drawablePadding="8dp" />
+
+                    <!-- Eat Routine Info -->
+                    <TextView
+                        android:id="@+id/eatRoutineText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No routine set"
+                        android:textSize="14sp"
+                        android:textColor="@color/primary_text"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider_color"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Section Title -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notes"
+                        android:textSize="16sp"
+                        android:textColor="@color/primary_color"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp"
+                        android:drawableStart="@drawable/ic_note"
+                        android:drawablePadding="8dp"/>
+
+                    <!-- Note Info -->
+                    <TextView
+                        android:id="@+id/noteText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No notes yet"
+                        android:textSize="14sp"
+                        android:textColor="@color/primary_text"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/addLogButton"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add/Update Log"
+                    android:textColor="@color/primary_color"
+                    android:layout_marginBottom="16dp"
+                    app:icon="@drawable/ic_edit"
+                    app:iconTint="@color/primary_color"
+                    app:strokeColor="@color/primary_color"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="8dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/testNotificationButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Test Vaccine Reminder"
+                    android:textColor="@android:color/white"
+                    app:icon="@drawable/ic_notification"
+                    app:iconTint="@android:color/white"
+                    app:backgroundTint="@color/primary_color"
+                    app:cornerRadius="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/bottom_nav_color_selector"
+        app:itemTextColor="@color/bottom_nav_color_selector" />
+</RelativeLayout>

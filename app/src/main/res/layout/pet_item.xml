@@ -1,0 +1,92 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/petCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:elevation="6dp"
+    android:radius="8dp"
+    android:backgroundTint="@color/cardBackground">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end|top"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete"/>
+
+
+        <ImageView
+            android:id="@+id/petImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="Pet Image"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/circular_border"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/petNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pet_name_label"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/petBreedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/breed_label"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/petAgeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/age_label"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/editButton"
+                android:text="Edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/logRecordButton"
+                android:text="Log Record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

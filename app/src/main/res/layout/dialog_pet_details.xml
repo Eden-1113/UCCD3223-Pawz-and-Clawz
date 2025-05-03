@@ -1,0 +1,196 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/petImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/placeholder_image" />
+
+        <!-- Pet Name with Gender Icon beside -->
+        <LinearLayout
+            android:id="@+id/nameGenderContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/petName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pet Name"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:fontFamily="@font/font" />
+
+            <ImageView
+                android:id="@+id/genderIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_female_icon"
+                android:contentDescription="Gender Icon" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/speciesBreedContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/speciesIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Species Icon" />
+
+            <TextView
+                android:id="@+id/petBreed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Breed"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <!-- Date of Birth with icon -->
+        <LinearLayout
+            android:id="@+id/dobContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/dobIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_dob_icon"
+                android:contentDescription="DOB Icon" />
+
+            <TextView
+                android:id="@+id/petDOB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Age with icon -->
+        <LinearLayout
+            android:id="@+id/ageContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/ageIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_age_icon"
+                android:contentDescription="Age Icon" />
+
+            <TextView
+                android:id="@+id/petAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+
+        <!-- Contact (Phone Number) with icon -->
+        <LinearLayout
+            android:id="@+id/contactContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/phoneIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_phone"
+                android:contentDescription="Phone Icon" />
+
+            <TextView
+                android:id="@+id/petContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Status with icon -->
+        <LinearLayout
+            android:id="@+id/statusContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/statusIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_status"
+                android:contentDescription="Status Icon" />
+
+            <TextView
+                android:id="@+id/petStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/petDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:padding="8dp"
+                android:textColor="#444444"/>
+        </ScrollView>
+
+    </LinearLayout>
+</ScrollView>

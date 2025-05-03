@@ -1,0 +1,220 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF9F9">
+
+    <!-- Back button -->
+    <ImageButton
+        android:id="@+id/buttonBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:src="@drawable/ic_back_arrow"
+        android:contentDescription="Back"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <!-- Top logo -->
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_pawzclawz_logo_top" />
+
+    <!-- Profile Details title -->
+    <TextView
+        android:id="@+id/textProfileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Profile Details"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <!-- gap under title -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_below="@id/textProfileTitle" />
+
+    <!-- Scrollable form -->
+    <ScrollView
+        android:layout_below="@id/textProfileTitle"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Profile Image -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <FrameLayout
+                    android:id="@+id/profileImageContainer"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerHorizontal="true">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imageViewProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:background="#DDDDDD"
+                        android:src="@drawable/default_profile"
+                        app:shapeAppearanceOverlay="@style/RoundedCornerImage" />
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/buttonSelectProfileImage"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignEnd="@id/profileImageContainer"
+                    android:layout_alignBottom="@id/profileImageContainer"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/circle_background_accent"
+                    android:drawableTop="@drawable/ic_camera"
+                    android:contentDescription="Change Profile Picture"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <!-- Name -->
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:background="@drawable/edit_text_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:inputType="textPersonName"
+                android:enabled="false" />
+
+            <!-- Birthday & Age -->
+            <EditText
+                android:id="@+id/editTextBirthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Birthday"
+                android:focusable="false"
+                android:background="@drawable/edit_text_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="4dp"
+                android:enabled="false" />
+            <TextView
+                android:id="@+id/textViewAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age: "
+                android:layout_marginBottom="16dp" />
+
+            <!-- Gender -->
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:enabled="false" />
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:enabled="false" />
+            </RadioGroup>
+
+            <!-- Email (now disabled until Edit) -->
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:background="@drawable/edit_text_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:inputType="textEmailAddress"
+                android:enabled="false" />
+
+            <!-- Address -->
+            <EditText
+                android:id="@+id/editTextAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:background="@drawable/edit_text_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:inputType="textPostalAddress"
+                android:enabled="false" />
+
+            <!-- Phone -->
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:background="@drawable/edit_text_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="24dp"
+                android:inputType="phone"
+                android:enabled="false" />
+
+            <!-- Edit & Save buttons -->
+            <Button
+                android:id="@+id/buttonEditProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:background="@drawable/rounded_button"
+                android:padding="12dp" />
+
+            <Button
+                android:id="@+id/buttonSaveProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Profile"
+                android:background="@drawable/rounded_button"
+                android:padding="12dp"
+                android:visibility="gone"
+                android:layout_marginTop="12dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/bottom_nav_color_selector"
+        app:itemTextColor="@color/bottom_nav_color_selector" />
+
+</RelativeLayout>
