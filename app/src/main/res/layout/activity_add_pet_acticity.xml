@@ -1,0 +1,35 @@
+<!-- res/layout/activity_add_pet.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/petNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pet Name"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/petBreedEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Breed"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/petAgeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Age"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/savePetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Pet"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

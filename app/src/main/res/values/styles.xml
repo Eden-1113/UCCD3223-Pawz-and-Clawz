@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base app theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your theme here -->
+    </style>
+
+    <!-- Custom style for rounded corner image -->
+    <style name="RoundedCornerImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item> <!-- You can adjust the radius -->
+    </style>
+
+    <style name="CalendarDateTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#2C3E50</item>
+    </style>
+
+
+</resources>

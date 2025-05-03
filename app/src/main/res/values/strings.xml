@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">Pawz&amp;Clawz</string>
+    <string name="breed_label">Breed:</string>
+    <string name="age_label">Age:</string>
+    <string name="pet_name_label">Name:</string>
+
+    <string-array name="pet_species_array">
+        <item>Dog</item>
+        <item>Cat</item>
+        <item>Rabbit</item>
+        <item>Bird</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="dog_breeds">
+        <item>Labrador</item>
+        <item>Poodle</item>
+        <item>Bulldog</item>
+        <item>Golden Retriever</item>
+        <item>Beagle</item>
+        <item>German Shepherd</item>
+        <item>Rottweiler</item>
+        <item>Boxer</item>
+        <item>Yorkshire Terrier</item>
+        <item>Dachshund</item>
+        <item>Chihuahua</item>
+        <item>Shih Tzu</item>
+        <item>Cocker Spaniel</item>
+        <item>Doberman Pinscher</item>
+        <item>Siberian Husky</item>
+        <item>Australian Shepherd</item>
+        <item>French Bulldog</item>
+        <item>Great Dane</item>
+        <item>Border Collie</item>
+        <item>Saint Bernard</item>
+    </string-array>
+
+
+    <string-array name="cat_breeds">
+        <item>Persian</item>
+        <item>Siamese</item>
+        <item>Maine Coon</item>
+        <item>Bengal</item>
+        <item>British Shorthair</item>
+        <item>Ragdoll</item>
+        <item>Scottish Fold</item>
+        <item>Birman</item>
+        <item>Abysinnian</item>
+        <item>Russian Blue</item>
+        <item>Norwegian Forest</item>
+        <item>Oriental Shorthair</item>
+        <item>Devon Rex</item>
+        <item>American Shorthair</item>
+        <item>Egyptian Mau</item>
+        <item>Savannah</item>
+        <item>Turkish Angora</item>
+        <item>Manx</item>
+        <item>Himalayan</item>
+        <item>Oriental Longhair</item>
+    </string-array>
+
+
+    <string-array name="rabbit_breeds">
+        <item>Holland Lop</item>
+        <item>Netherland Dwarf</item>
+        <item>Lionhead</item>
+        <item>English Angora</item>
+        <item>Mini Rex</item>
+        <item>Flemish Giant</item>
+        <item>Himalayan</item>
+        <item>English Spot</item>
+        <item>Mini Lop</item>
+        <item>New Zealand</item>
+        <item>French Lop</item>
+        <item>Californian</item>
+        <item>Himalayan</item>
+        <item>Rex</item>
+        <item>American Chinchilla</item>
+        <item>Silver Fox</item>
+        <item>Checkered Giant</item>
+        <item>English Angora</item>
+        <item>Hotot</item>
+        <item>Tan</item>
+    </string-array>
+
+
+    <string-array name="bird_breeds">
+        <item>Parakeet</item>
+        <item>Cockatiel</item>
+        <item>Canary</item>
+        <item>Lovebird</item>
+        <item>Macaw</item>
+        <item>African Grey Parrot</item>
+        <item>Conure</item>
+        <item>Budgie</item>
+        <item>Finch</item>
+        <item>Budgerigar</item>
+        <item>Eclectus Parrot</item>
+        <item>Amazon Parrot</item>
+        <item>Quaker Parrot</item>
+        <item>Sun Conure</item>
+        <item>Gouldian Finch</item>
+        <item>Canary-winged Parakeet</item>
+        <item>Pionus Parrot</item>
+        <item>Scarlet Macaw</item>
+        <item>Cockatoo</item>
+        <item>Indian Ringneck Parakeet</item>
+    </string-array>
+
+
+    <string-array name="other_breeds">
+        <item>Unknown</item>
+        <item>Mixed Breed</item>
+        <item>Crossbreed</item>
+        <item>Hybrid</item>
+        <item>Not Listed</item>
+        <item>Undetermined</item>
+        <item>Unspecified</item>
+        <item>Generic</item>
+        <item>Mongrel</item>
+        <item>Street Breed</item>
+    </string-array>
+    <string name="pet_image">Pet Image</string>
+
+</resources>
